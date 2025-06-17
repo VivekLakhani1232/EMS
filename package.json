@@ -1,0 +1,30 @@
+{
+  "name": "ems",
+  "version": "1.0.0",
+  "description": "Employee Management System",
+  "main": "index.js",
+"scripts": {
+  "start": "node main.js",
+  "dev": "nodemon main.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivekLakhani1232/EMS.git"
+  },
+  "author": "vp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivekLakhani1232/EMS/issues"
+  },
+  "homepage": "https://github.com/VivekLakhani1232/EMS#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
