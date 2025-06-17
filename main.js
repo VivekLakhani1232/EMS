@@ -1,7 +1,12 @@
 const express = require('express');
 const db = require('./config/db');
+const employeeRoutes = require('./routes/router');
 const app = express();
 require('dotenv').config();
+
+app.use(express.json());
+app.use('/uploads', express.static('uploads'));
+app.use('/api', employeeRoutes);
 
 
 const PORT = process.env.PORT || 3000;
