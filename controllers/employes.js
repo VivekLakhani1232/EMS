@@ -16,6 +16,7 @@ exports.createEmployee = async (req, res) => {
     const id = employee[0].employee_id;
 
     for (const file of files) {
+      const fullUrl = `http://localhost:3000/uploads/${file.filename}`;
       await db.query(
         `INSERT INTO ems.documents (document_name, document_type, document_size, path, employee_id)
          VALUES ($1, $2, $3, $4, $5)`,
@@ -24,9 +25,10 @@ exports.createEmployee = async (req, res) => {
             file.originalname,
             file.mimetype,
             file.size,
-            file.path,
+            fullUrl,
             id
-          ]
+          ] ,
+           type : QueryTypes.INSERT 
         }
       );
     }
